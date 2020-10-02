@@ -59,6 +59,10 @@ __attribute__((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyreco
 }
 #endif
 
+#if (BILATERAL_COMBINATIONS + 0)
+#    include "quantum.h"
+#endif
+
 #ifdef RETRO_TAPPING_PER_KEY
 __attribute__((weak)) bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     return false;
