@@ -15,6 +15,9 @@
 
 #define TAPPING_TERM 220
 #define TAPPING_TERM_PER_KEY
-#define IGNORE_MOD_TAP_INTERRUPT    // makes it possible to do rolling combos with keys that convert to other keys on hold, by enforcing the TAPPING_TERM for both keys - needed for backspace
+//#define IGNORE_MOD_TAP_INTERRUPT    // makes it possible to do rolling combos with keys that convert to other keys on hold, by enforcing the TAPPING_TERM for both keys - needed for backspace
 #define BILATERAL_COMBINATIONS 500
 //#define QUICK_TAP_TERM 0            // disable auto-repeat, also needed for backspace / shift
+
+#define HOLD_ON_OTHER_KEY_PRESS
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY

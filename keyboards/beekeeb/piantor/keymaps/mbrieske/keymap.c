@@ -33,6 +33,26 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case HOME_O:
+        case HOME_S:
+        case HOME_I:
+        case HOME_E:
+        case HOME_T:
+        case HOME_N:
+        case HOME_R:
+        case HOME_D:
+            // Do not force the mod-tap key press to be handled as a modifier
+            // if any other key was pressed while the mod-tap key is held down.
+            return false;
+        default:
+            // Force the dual-role key press to be handled as a modifier if any
+            // other key was pressed while the mod-tap key is held down.
+            return true;
+    }
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /*
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
