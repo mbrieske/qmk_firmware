@@ -11,6 +11,12 @@
         "mousekey": true,
         "nkro": true
     },
+    "ps2": {
+        "enabled": true,
+        "driver": "vendor",
+        "clock_pin": 27,
+        "data_pin": 26
+    },
     "processor": "RP2040",
     "url": "https://github.com/beekeeb/piantor",
     "usb": {
